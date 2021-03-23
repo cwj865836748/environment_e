@@ -1,0 +1,50 @@
+
+	.contain {
+		padding: 198rpx 60rpx 0;
+	}
+
+	.login_title {
+		font-size: 20px;
+		margin-bottom: 114rpx;
+
+		image {
+			width: 118rpx;
+			height: 118rpx;
+			margin-bottom: 28rpx;
+		}
+	}
+
+	.login_form {
+		margin-bottom: 116rpx;
+
+		&_one {
+			&_title {
+				font-size: 15px;
+				margin-bottom: 28rpx;
+			}
+
+			input {
+				padding-bottom: 20rpx;
+				box-sizing: content-box;
+				border-bottom: 2rpx solid rgba(255, 255, 255, .1);
+
+				.input_placeholder {
+					color: rgba(255, 255, 255, .3)
+				}
+			}
+		}
+
+		&_one:first-child {
+			margin-bottom: 80rpx;
+		}
+
+	}
+
+	.login_button {
+		background: #356fe5;
+		border-radius: 46rpx;
+		height: 90rpx;
+		color: #FFFFFF;
+		font-size: 30rpx;
+        line-height: 90rpx;
+	}

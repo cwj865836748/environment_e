@@ -2,21 +2,22 @@
 	<view class="layout me-fx-col">
 		<u-navbar :is-back="isBack" :title="navTitle" :title-color="navTitleColor" :background="background"></u-navbar>
 		<view class="slot me-fx-1">
-			<scroll-view scroll-y="true" :refresher-enabled="refresherEnabled" :refresher-triggered="triggered" :refresher-threshold="100"
-			 refresher-background="lightgreen" @refresherpulling="onPulling" @refresherrefresh="onRefresh" @refresherrestore="onRestore"
-			 @refresherabort="onAbort" @scrolltolower="onTolower">
-				<slot></slot> 
-			</scroll-view>  
-		</view>  
-		<u-tabbar :show="tabbarShow" v-model="current" :list="toolBarList"></u-tabbar>
+			<scroll-view scroll-y="true" :refresher-enabled="refresherEnabled" :refresher-triggered="triggered"
+			 :refresher-threshold="100" refresher-background="lightgreen" @refresherpulling="onPulling" @refresherrefresh="onRefresh"
+			 @refresherrestore="onRestore" @refresherabort="onAbort" @scrolltolower="onTolower">
+				<slot></slot>
+			</scroll-view>
+		</view>
+		<!-- 		<u-tabbar :show="tabbarShow" v-model="current" :list="toolBarList"></u-tabbar>
+ -->
 	</view>
 </template>
 
-<script> 
+<script>
 	export default {
 		name: 'layout',
 
-		props: { 
+		props: {
 			navTitle: {
 				type: String,
 				default: ''
@@ -77,7 +78,7 @@
 
 		},
 		mounted() {
-		
+
 		},
 		methods: {
 			//自定义下拉刷新控件被下拉
@@ -88,7 +89,7 @@
 				}, 1000)
 			},
 			//自定义下拉刷新被触发	
-			onRefresh() { 
+			onRefresh() {
 				if (this._freshing) return;
 				this._freshing = true;
 				setTimeout(() => {
@@ -106,7 +107,7 @@
 				console.log("onAbort");
 			},
 			onTolower() {
-				
+
 			}
 		}
 	}

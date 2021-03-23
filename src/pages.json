@@ -7,16 +7,94 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uView UI"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
-			"path": "pages/template/index",
+			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "模板"
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/profileInformation/index",
+			"style": {
+				"navigationBarTitleText": "概况信息"
+			}
+		},
+		{
+			"path": "pages/pollutionSource/index",
+			"style": {
+				"navigationBarTitleText": "污染源监控"
+			}
+		},
+		{
+			"path": "pages/videoSurveillance/index",
+			"style": {
+				"navigationBarTitleText": "视频监控"
+			}
+		},
+		{
+			"path": "pages/hydrologicalMonitoring/index",
+			"style": {
+				"navigationBarTitleText": "水文监控"
+			}
+		},
+		{
+			"path": "pages/damDisplacement/index",
+			"style": {
+				"navigationBarTitleText": "坝体位移"
+			}
+		},
+		{
+			"path": "pages/reservoirMonitoring/index",
+			"style": {
+				"navigationBarTitleText": "库坝监测"
+			}
+		},
+		{
+			"path": "pages/environmentalProtection/index",
+			"style": {
+				"navigationBarTitleText": "环保处理系统监测"
+			}
+		},
+		{
+			"path": "pages/domesticSewage/index",
+			"style": {
+				"navigationBarTitleText": "生活污水监测"
+			}
+		},
+		{
+			"path": "pages/emergencyValve/index",
+			"style": {
+				"navigationBarTitleText": "应急阀门监测"
+			}
+		},
+		{
+			"path": "pages/biomonitoring/index",
+			"style": {
+				"navigationBarTitleText": "生物监测"
+			}
+		},
+		{
+			"path": "pages/messageCenter/index",
+			"style": {
+				"navigationBarTitleText": "消息中心"
+			}
+		},
+		{
+			"path": "pages/messageDetail/index",
+			"style": {
+				"navigationBarTitleText": "消息详情"
+			}
+		},
+		{
+			"path": "pages/updatePassword/index",
+			"style": {
+				"navigationBarTitleText": "修改密码"
 			}
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -24,25 +102,25 @@
 		"backgroundColor": "#F8F8F8",
 		"navigationStyle": "custom"
 	},
-	"tabBar": {
-		"color": "#909399",
-		"selectedColor": "#303133",
-		"backgroundColor": "#FFFFFF",
-		"borderStyle": "black",
-		"list": [{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/uview/example/component.png",
-				"selectedIconPath": "static/uview/example/component_select.png",
-				"text": "组件"
-			},
-			{
-				"pagePath": "pages/template/index",
-				"iconPath": "static/uview/example/template.png",
-				"selectedIconPath": "static/uview/example/template_select.png",
-				"text": "模板"
-			}
-		]
-	},
+	// "tabBar": {
+	// 	"color": "#909399",
+	// 	"selectedColor": "#303133",
+	// 	"backgroundColor": "#FFFFFF",
+	// 	"borderStyle": "black",
+	// 	"list": [{
+	// 			"pagePath": "pages/index/index",
+	// 			"iconPath": "static/uview/example/component.png",
+	// 			"selectedIconPath": "static/uview/example/component_select.png",
+	// 			"text": "组件"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/template/index",
+	// 			"iconPath": "static/uview/example/template.png",
+	// 			"selectedIconPath": "static/uview/example/template_select.png",
+	// 			"text": "模板"
+	// 		}
+	// 	]
+	// },
 	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
 		"list": [{
@@ -51,8 +129,18 @@
 				"query": "" //启动参数
 			},
 			{
-				"name": "地图", //模式名称
-				"path": "pages/map/index", //启动页面
+				"name": "登录页", //模式名称
+				"path": "pages/login/index", //启动页面
+				"query": "" //启动参数
+			},
+			{
+				"name": "污染源监控", //模式名称
+				"path": "pages/pollutionSource/index", //启动页面
+				"query": "" //启动参数
+			},
+			{
+				"name": "视频监控", //模式名称
+				"path": "pages/videoSurveillance/index", //启动页面
 				"query": "" //启动参数
 			}
 		]

@@ -1,10 +1,13 @@
 <template>
 	<view class="layout me-fx-col">
-		<u-navbar :is-back="isBack" :title="navTitle" :title-color="navTitleColor" :background="background"></u-navbar>
+		<u-navbar :is-back="isBack" :title-width="titleWidth" :back-icon-color="backIconColor" :border-bottom="false" :title="navTitle" :title-color="navTitleColor"
+		 :background="background" :back-icon-size="backIconSize" :title-size="titleSize">
+			<slot name="header"></slot>
+		</u-navbar>
 		<view class="slot me-fx-1">
-			<slot></slot> 
+			<slot></slot>
 		</view>
-		<u-tabbar :show="tabbarShow" v-model="current" :list="toolBarList"></u-tabbar>
+		<!-- <u-tabbar :show="tabbarShow" v-model="current" :list="toolBarList"></u-tabbar> -->
 	</view>
 </template>
 
@@ -17,19 +20,35 @@
 				type: String,
 				default: ''
 			},
+			titleSize: {
+				type: String,
+				default: '36'
+			},
+			titleWidth: {
+				type: String,
+				default: '250'
+			},
 			navTitleColor: {
 				type: String,
-				default: '#606266'
+				default: '#FFFFFF'
 			},
 			isBack: {
 				type: Boolean,
 				default: false
 			},
+			backIconColor: {
+				type: String,
+				default: '#FFFFFF'
+			},
+			backIconSize: {
+				type: String,
+				default: '50'
+			},
 			background: {
-				type: Object, 
+				type: Object,
 				default: () => {
 					return {
-						background: 'linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))',
+						background: '#022D55',
 					}
 				}
 			},
@@ -66,10 +85,10 @@
 			};
 		},
 		created() {
-			
+
 		},
 		mounted() {
-			
+
 		},
 		methods: {
 
@@ -78,8 +97,8 @@
 </script>
 
 <style lang="scss">
-.layout {
-	width: 100%;
-	height: 100%;
-}
+	.layout {
+		width: 100%;
+		height: 100%;
+	}
 </style>

@@ -1,4 +1,7 @@
 /**app.wxss**/
+$bgColor:#022D55;
+$sizeColor:#FFFFFF;
+
 page,
 block,
 view,
@@ -33,13 +36,14 @@ contact-button {
 
 page {
     font-size: 28rpx;
-    font-family: -apple-system-font, Helvetica Neue, sans-serif;
+    font-family: Source Han Sans SC, Source Han Sans SC-Regular;
     /* 会对样式造成非常大的影响 */
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
 	width: 100%;
 	height: 100%;
-	background: #f9f9f9;
+	background: $bgColor;
+	color: $sizeColor;
 }
  
  
@@ -49,6 +53,7 @@ button:before {
     border-radius: 0;
     border: 0;
     position: relative;
+	line-height: 0;
 }
  
 image,
@@ -229,6 +234,9 @@ button[disabled] {
 .me-fx-1{/*占满剩余空间*/
 	flex:1;
 }
+.me-fx-wrap{/*占满剩余空间*/
+	flex-wrap:wrap;
+}
 /*浮动布局*/
 
 .me-fot-parent:after{/*加在浮动元素的父元素上 解决因所有子元素浮动后父元素的高度问题*/
@@ -258,4 +266,19 @@ button[disabled] {
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.form_list {
+	margin:20rpx 24rpx 0;
+}
+.form_list_select {
+	margin:20rpx 24rpx 0;
+	border-radius: 10rpx;
+	background:rgba(83,143,245,.1);
+	padding: 0 16rpx;
+	height: 70rpx;
+	font-size: 26rpx;
+	image {
+		width: 21rpx;
+		height: 12rpx;
+	}
 }

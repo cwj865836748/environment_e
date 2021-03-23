@@ -1,0 +1,40 @@
+.home_title {
+	padding: 0 20rpx;
+	font-size: 34rpx;
+	width: 100%;
+	   image {
+	    width: 44rpx;
+	    height: 44rpx;
+		margin-right: 20rpx;
+	   }
+	   .helpCenter {
+	    width: 36rpx;
+	    height: 36rpx;
+	   	
+	   }
+}
+.home {
+	padding-top: 60rpx;
+	&_menu {
+		margin-bottom: 90rpx;
+	  &_one {
+		flex:33.33%; 
+		margin-bottom: 80rpx;
+		image {
+				 width: 104rpx;
+				  height: 104rpx;
+				  margin-bottom: 20rpx;
+		}  
+	  }
+	  
+	}
+	&_loginout {
+		font-size: 30rpx;
+		margin: 0 20rpx;
+		height: 90rpx;
+		background: #0a3765;
+		border-radius: 20rpx;
+		line-height: 90rpx;
+		text-align: center;
+	}
+}

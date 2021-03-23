@@ -1,5 +1,5 @@
 let config={
-	baseUrl:'https://api.hdenv.cn',
+	baseUrl:'http://218.86.96.55:9019',
 	amapKey:'a7dde518c8c9481f817f136606ff3152'
 };
 // 开发环境

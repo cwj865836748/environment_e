@@ -1,0 +1,51 @@
+.tableAll {
+	height: 100%;
+}
+table {
+	background-color: transparent !important;
+	border: none!important;
+	margin-top: 40rpx;
+	display: block;
+	border-collapse:collapse;  //表格的边框合并，如果相邻，则共用一个边框。
+    border-spacing:0px;
+	text-align: center;
+	font-size: 26rpx;
+}
+th {
+	padding: 5px 0;
+	height: 80rpx;
+	min-width: 240rpx;
+	background: rgba(83,143,245,.1);
+	color: #ffffff;
+	border-bottom: none;
+	border-right: 2rpx solid #1b4167;
+	vertical-align: middle;
+	// box-sizing: content-box;
+	
+}
+td {
+	padding: 5px 0;
+	height: 84rpx;
+	min-width: 240rpx;
+	color: rgba(255,255,255,.8);
+	border-bottom: 2rpx solid #1b4167;
+	border-right: 2rpx solid #1b4167;
+		vertical-align: middle;
+}
+
+/deep/.scrollx .uni-scroll-view-content{
+
+		display: flex;
+		flex-direction: column;
+	
+}
+.scrolly {
+	height:0;
+}
+scroll-view {
+	height: 100%;
+}
+
+
+
+

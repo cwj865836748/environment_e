@@ -1,5 +1,5 @@
 {
-    "name" : "应用",
+    "name" : "紫金环保",
     "appid" : "__UNI__4076711",
     "description" : "应用",
     "versionName" : "1.0.0",
@@ -9,9 +9,9 @@
         /* 5+App特有相关 */
         "usingComponents" : true,
         "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
+            "alwaysShowBeforeRender" : false,
             "waiting" : true,
-            "autoclose" : true,
+            "autoclose" : false,
             "delay" : 0
         },
         "modules" : {
@@ -22,26 +22,8 @@
             /* 应用发布信息 */
             "android" : {
                 /* android打包配置 */
-                "permissions" : [
-                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_INPUT_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ],
-                "abiFilters" : [ "armeabi-v7a" ]
+                "permissions" : [],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
             },
             "ios" : {},
             /* ios打包配置 */
@@ -56,6 +38,30 @@
             },
             "splashscreen" : {
                 "androidStyle" : "common"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "C:/Users/zyark/Desktop/sign_logo72@2x.png",
+                    "xhdpi" : "C:/Users/zyark/Desktop/sign_logo96@2x.png",
+                    "xxhdpi" : "C:/Users/zyark/Desktop/sign_logo144@2x.png",
+                    "xxxhdpi" : "C:/Users/zyark/Desktop/sign_logo192@2x.png"
+                }
+            }
+        },
+        "nativePlugins" : {
+            "Zyark_HiKVideo" : {
+                "__plugin_info__" : {
+                    "name" : "Zyark_HiKVideo",
+                    "description" : "原生海康插件",
+                    "platforms" : "Android",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {}
+                }
             }
         }
     },
