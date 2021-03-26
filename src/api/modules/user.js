@@ -56,6 +56,11 @@ export default {
 			data
 		})
 	},
+	swRegions() {
+		return request({
+			url: '/esys/sw/regions'
+		})
+	},
 	//水文监测模块-汇总报表
 	swReportForms(data) {
 		return request({

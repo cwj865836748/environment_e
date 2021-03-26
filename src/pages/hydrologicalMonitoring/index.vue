@@ -2,7 +2,8 @@
 	<uni-clayout :isBack="true" navTitle="水文监测">
 		<view class="me-fx-col" style="height: 100%;">
 			<uni-tab :tabActive.sync="tabActive"></uni-tab>
-			<uni-control ref="control" :dateList="dateList" :dateNumber.sync='dateNumber' :tabActive="tabActive" @getQuery="getQuery"></uni-control>
+			<uni-control ref="control" :dateList='dateList' :dateNumber.sync='dateNumber' :tabActive="tabActive" :addressList="addressList" :query="query"
+			 @getQuery="getQuery" v-if="addressList.length"></uni-control>
 			<view class="me-fx-1">
 				<uni-table :tableTh="tableTh" :tableList="tableList" :totalCount='totalCount' :page.sync="query.offset" @getList="getList"
 				 v-show="tabActive!==2">
@@ -57,9 +58,11 @@
 					label: '年累计雨量'
 				}],
 				dateNumber:0,
+				addressList: [],
 				query: {
 					offset: 0,
 					limit: 20,
+					region: '',
 					startTime: formatTime(new Date(),'YYYY-mm-dd'),
 					endTime: formatTime(new Date(),'YYYY-mm-dd'),
 					time:''
@@ -94,10 +97,20 @@
 
 		methods: {
 			async getInit() {
-				const {data} =await this.$api.User.summaryInfo({
+				const {
+					data
+				} = await this.$api.User.swRegions()
+				const {data:richText} =await this.$api.User.summaryInfo({
 					type: 3
 				})
-				this.richText = data
+				this.richText = richText
+				this.query.region = data.list[0]
+				this.addressList = data.list.map(item => {
+					return {
+						label: item,
+						value: item
+					}
+				})
 				this.getList()
 			},
 			async getList() {
