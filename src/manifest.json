@@ -2,7 +2,7 @@
     "name" : "紫金环保",
     "appid" : "__UNI__4076711",
     "description" : "应用",
-    "versionName" : "1.0.0",
+    "versionName" : "1.0.3",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
@@ -16,6 +16,9 @@
         },
         "modules" : {
             "Maps" : {}
+        },
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持  
         },
         /* 模块配置 */
         "distribute" : {
@@ -41,10 +44,10 @@
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "C:/Users/zyark/Desktop/sign_logo72@2x.png",
-                    "xhdpi" : "C:/Users/zyark/Desktop/sign_logo96@2x.png",
-                    "xxhdpi" : "C:/Users/zyark/Desktop/sign_logo144@2x.png",
-                    "xxxhdpi" : "C:/Users/zyark/Desktop/sign_logo192@2x.png"
+                    "hdpi" : "src/static/sign_logo72@2x.png",
+                    "xhdpi" : "src/static/sign_logo96@2x.png",
+                    "xxhdpi" : "src/static/sign_logo144@2x.png",
+                    "xxxhdpi" : "src/static/sign_logo192@2x.png"
                 }
             }
         },

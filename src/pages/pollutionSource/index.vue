@@ -8,7 +8,7 @@
 				<uni-table :tableTh="tableTh" :tableList="tableList" :totalCount='totalCount' :page.sync="query.offset" @getList="getList"
 				 v-show="tabActive!==2">
 					<template slot-scope="scope">
-						<td>{{scope.row.time|formatTime('YYYY-mm-dd HH:MM:SS')}}</u-td>
+						<td>{{scope.row.time}}</u-td>
 						<td>{{scope.row.qhw}}</td>
 						<td>{{scope.row.zg}}</td>
 						<td>{{scope.row.zx}}</td>
@@ -22,7 +22,7 @@
 				</uni-table>
 				<rich-text :nodes="richText" v-show="tabActive===2"></rich-text>
 			</view>
-		</view>
+	0	</view>
 	</uni-clayout>
 </template>
 <script>
@@ -85,7 +85,7 @@
 				tabActive: 0,
 				addressList: [],
 				query: {
-					offset: 1,
+					offset: 0,
 					limit: 20,
 					region: '',
 					startTime: formatTime(new Date(),'YYYY-mm-dd'),
@@ -148,7 +148,7 @@
 			},
 			getQuery(key, value) {
 				this.tableList = []
-				this.query.offset = 1
+				this.query.offset = 0
 				if(Array.isArray(key)) {
 					key.forEach(item=>{
 						this.query[item] = value

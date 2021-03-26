@@ -9,7 +9,7 @@
 					<template slot-scope="scope">
 						<td>{{scope.row.name}}</td>
 						<td>{{scope.row.region}}</td>
-						<td>{{scope.row.time|formatTime('YYYY-mm-dd HH:MM:SS')}}</u-td>
+						<td>{{scope.row.time}}</u-td>
 						<td>{{scope.row.water}}</td>
 						<td>{{scope.row.library}}</td>
 						<td>{{scope.row.ph}}</td>
@@ -85,7 +85,7 @@
 				tableList: [],
 				tabActive: 0,
 				query: {
-					offset: 1,
+					offset: 0,
 					limit: 20,
 					startTime: formatTime(new Date(),'YYYY-mm-dd'),
 					endTime: formatTime(new Date(),'YYYY-mm-dd')
@@ -129,7 +129,7 @@
 			},
 			getQuery(key, value) {
 				this.tableList = []
-				this.query.offset = 1
+				this.query.offset = 0
 				key.forEach(item=>{
 					this.query[item] = value
 				})

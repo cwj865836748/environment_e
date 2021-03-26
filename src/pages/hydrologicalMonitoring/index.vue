@@ -9,7 +9,7 @@
 					<template slot-scope="scope">
 						<td>{{scope.row.swid}}</td>
 						<td>{{scope.row.name}}</td>
-						<td>{{scope.row.time|formatTime('YYYY-mm-dd HH:MM:SS')}}</u-td>
+						<td>{{scope.row.time}}</u-td>
 						<td>{{scope.row.ba}}</td>
 					</template>
 				</uni-table>
@@ -58,7 +58,7 @@
 				}],
 				dateNumber:0,
 				query: {
-					offset: 1,
+					offset: 0,
 					limit: 20,
 					startTime: formatTime(new Date(),'YYYY-mm-dd'),
 					endTime: formatTime(new Date(),'YYYY-mm-dd'),
@@ -109,7 +109,7 @@
 			},
 			getQuery(key, value) {
 				this.tableList = []
-				this.query.offset = 1
+				this.query.offset = 0
 				if(Array.isArray(key)) {
 					key.forEach(item=>{
 						this.query[item] = value

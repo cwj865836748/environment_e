@@ -113,7 +113,7 @@
 				selectShow: false,
 				defaultValue: 0,
 				query: {
-					offset: 1,
+					offset: 0,
 					limit: 20,
 					startTime: formatTime(new Date(),'YYYY-mm-dd'),
 					endTime: formatTime(new Date(),'YYYY-mm-dd'),
@@ -149,14 +149,12 @@
 			},
 			getQuery(key, value) {
 				this.tableList = []
-				this.query.offset = 1
+				this.query.offset = 0
 				this.query[key] = value
 				this.getList()
 			},
 			confirm(e) {
 				this.defaultValue = e[0].value
-				this.query.startTime=''
-				this.query.endTime=''
 				this.getQuery('region', e[0].label)
 			},
 			bindDateChange(key,e) {
@@ -164,7 +162,7 @@
 			},
 			clearDate(){
 				this.tableList = []
-				this.query.offset = 1
+				this.query.offset = 0
 				this.query.startTime=''
 				this.query.endTime=''
 				this.getList()

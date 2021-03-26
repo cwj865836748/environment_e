@@ -12,7 +12,7 @@
 								<td :rowspan="item.length" v-if="!indexs">{{items.region}}</td>
 								<td>{{items.name}}</td>
 								<td>{{items.state}}</td>
-								<td>{{items.time|formatTime('YYYY-mm-dd HH:MM:SS')}}</td>
+								<td>{{items.time}}</td>
 							</tr>
 						</view>
 					</template>
